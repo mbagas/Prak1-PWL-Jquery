@@ -77,6 +77,7 @@ const tes = () => {
 };
 const tes2 = () => {
   let data = ``;
+  $("#data").empty();
   $("select").map((i, item) => {
     if (item.value == catalog[i].itemName) {
       if ($(':input[type="number"]').eq(i).val() > catalog[i].amount) {
@@ -93,6 +94,7 @@ const tes2 = () => {
         
             </li>`;
     console.log($(':input[type="number"]').eq(i).val());
+
     $("#data").append(data);
   });
 
